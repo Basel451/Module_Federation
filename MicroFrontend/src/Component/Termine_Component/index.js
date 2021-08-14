@@ -5,7 +5,7 @@ export default function Termine({ value }) {
   let d = "";
   //console.log(value.hintergrund);
   return (
-    <>
+    <div style={{Background:value.hintergrund}}>
       {value.eintraege.map((item, index) => {
         return (
           <article key={`${index}-termin`} className="div_Termine">
@@ -44,6 +44,6 @@ export default function Termine({ value }) {
           </article>
         );
       })}
-    </>
+    </div>
   );
 }
