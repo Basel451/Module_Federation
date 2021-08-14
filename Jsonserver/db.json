@@ -1,0 +1,101 @@
+{
+  "Kalendereintrag": [
+    {
+      "id": "1",
+      "titel": "Klettern für Kids",
+      "beschreibung": "Bescheibung für das Titel 'Klettern für Kids' um 10: Uhr",
+      "datum": "27.08.2021",
+      "uhrzeit": "10:00",
+      "kategorie": [
+        {
+          "name": "Klettern"
+        }
+      ],
+      "ort": "Kletterwand"
+    },
+    {
+      "id": "2",
+      "titel": "Skateboarding",
+      "beschreibung": "Bescheibung für das Titel 'Skateboarding' um 15:00 Uhr",
+      "datum": "27.08.2021",
+      "uhrzeit": "15:00",
+      "kategorie": [
+        {
+          "name": "Skateboading"
+        }
+      ],
+      "ort": "Halle59"
+    },
+    {
+      "id": "3",
+      "titel": "Basketball",
+      "beschreibung": "Bescheibung für das Titel 'Basketball' um 18:00 Uhr",
+      "datum": "27.08.2021",
+      "uhrzeit": "18:00",
+      "kategorie": [
+        {
+          "name": "Artistik"
+        }
+      ],
+      "ort": "Freifläche"
+    },
+    {
+      "id": "4",
+      "titel": "Trial",
+      "beschreibung": "Bescheibung für das Titel 'Trial' um 10:00 Uhr",
+      "datum": "28.08.2021",
+      "uhrzeit": "10:00",
+      "kategorie": [
+        {
+          "name": "Trial"
+        }
+      ],
+      "ort": "Aussengelände"
+    },
+    {
+      "id": "5",
+      "titel": "Tag der offenen Tür",
+      "beschreibung": "Bescheibung für das Titel 'Tag der offenen Tür' um 10:00 Uhr",
+      "datum": "28.08.2021",
+      "uhrzeit": "10:00",
+      "kategorie": [
+        {
+          "name": "Klettern"
+        },
+        {
+          "name": "Skate"
+        }
+      ],
+      "ort": "Alle"
+    },
+    {
+      "id": "6",
+      "titel": "Trial",
+      "beschreibung": "Bescheibung für das Titel 'Trial' um 12:00 Uhr",
+      "datum": "29.07.2021",
+      "uhrzeit": "12:00",
+      "kategorie": [
+        {
+          "name": "Trial"
+        }
+      ],
+      "ort": "Aussengelände"
+    },
+    {
+      "id": "7",
+      "titel": "Tag der offenen Tür",
+      "beschreibung": "Bescheibung für das Titel 'Tag der offenen Tür' um 10:00 Uhr",
+      "datum": "25.08.2021",
+      "uhrzeit": "10:00",
+      "kategorie": [
+        {
+          "name": "Klettern"
+        },
+        {
+          "name": "Skate"
+        }
+      ],
+      "ort": "Alle"
+    }
+  ]
+}

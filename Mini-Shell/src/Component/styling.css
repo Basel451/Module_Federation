@@ -1,0 +1,84 @@
+/*Style für die Navigation*/
+.div_Navigation {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 105px;
+  width: 80%;
+  margin-left: 8%;
+  margin-right: 10%;
+  margin-top: -8px;
+  z-index: 10;
+}
+.logo {
+  width: 16%;
+  cursor: pointer;
+  border-style: none;
+  padding: 0;
+}
+.NEUES {
+  width: 9.5%;
+  border-style: none;
+  color: white;
+  background-color: black;
+}
+.DIE_AHK {
+  width: 9.5%;
+  border-style: none;
+  color: white;
+  background-color: rgb(70, 70, 119);
+}
+.KLETTERN {
+  width: 9.5%;
+  cursor: pointer;
+  border-style: none;
+  color: white;
+  background-color: rgba(76, 102, 248, 0.945);
+}
+.ARTISTIK {
+  width: 9.5%;
+  cursor: pointer;
+  border-style: none;
+  color: black;
+  background-color: rgb(245, 106, 56);
+}
+.HALLE59 {
+  width: 9.5%;
+  cursor: pointer;
+  border-style: none;
+  color: white;
+  background-color: brown;
+}
+.TRAILS59 {
+  width: 9.5%;
+  border-style: none;
+  color: white;
+  background-color: rgb(2, 92, 2);
+}
+.TRIAL {
+  width: 9.5%;
+  cursor: pointer;
+  border-style: none;
+  color: white;
+  background-color: rgb(115, 238, 115);
+}
+.KONTAKT {
+  width: 9.5%;
+  border-style: none;
+  color: white;
+  background-color: rgb(57, 41, 129);
+}
+.SHOP {
+  width: 9.5%;
+  border-style: none;
+  color: white;
+  background: linear-gradient(
+    to right bottom,
+    rgb(70, 70, 119),
+    rgba(77, 85, 131, 0.945),
+    rgb(245, 106, 56),
+    brown,
+    rgb(2, 92, 2),
+    rgb(115, 238, 115)
+  );
+}

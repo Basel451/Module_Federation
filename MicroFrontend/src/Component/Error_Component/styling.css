@@ -1,0 +1,34 @@
+/*Start Error*/
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14%;
+  }
+  .banner {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    margin-left: 60px;
+  }
+  .banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .banner {
+      padding: 0.4rem 3rem;
+      margin-left: -5px;
+      width: 30%;
+    }
+    .banner p {
+        font-size: 12px;
+        margin-bottom: 2rem;
+      }
+  }
+  /*End Error*/

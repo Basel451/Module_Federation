@@ -1,0 +1,15 @@
+
+Dise Datei hat die sämtliche Daten für das Micro Frontend.
+Hier werden die Kalendereinträge gespeichert, wobei jeder Kalendereintrag 
+folgende Daten Eigenschaftrn hat:
+    Id
+    Titel
+	Beschreibung
+	Datum
+	Uhrzeit
+	mehrere Kategorien (z.B. Skateboard)
+	Ort
+
+Die Kalendereinträge werden in ein Array gespeichert, wobei dann jeder Eintrag 
+ein Objekt ist und die Eigenschaft Kategorie ist ebenfalls ein Array, da diese 
+Eigenschaft mehrere Einträge pro Kalendereintrag haben kann

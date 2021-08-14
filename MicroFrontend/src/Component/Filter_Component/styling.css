@@ -1,0 +1,91 @@
+.div_filter{
+    display: flex;
+    flex-direction: row;
+    Justify-content: space-between;
+    line-height: 2%;
+  }
+  .suche_input{
+    background: rgba(247, 245, 245, 0.8);  display: flex;
+    flex-direction: column;
+    width: 31.1%;
+    padding-left: 2%;
+  }
+  .suche_input_block{
+    display: flex;
+    flex-direction: row;
+    Justify-content: space-between;
+    padding-right: 2%;
+    padding-bottom: 2%;
+  }
+  .input_suche{
+    width: 75%;
+    border-style: groove;
+    border-radius: 10px;
+    padding-left: 3%;
+    font-size: 1.2rem;
+    
+  }
+  .input_suche_Name{
+    width: 90%;
+    height: 93%;
+    border-style: groove;
+    border-radius: 10px;
+    padding-left: 3%;
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    width: 50%;
+    height: 95%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 100px 100px 100px 100px;
+    cursor: pointer;
+    transition: all, 240ms ease-in-out;
+    background: rgb(65, 105, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(65, 105, 255, 1) 35%,
+      rgba(9, 9, 121, 1) 100%
+    );
+    margin-top: 2%;
+    margin-left: 22%;
+  }
+  .btn-primary:hover {
+
+    background: all 0.5s linear;
+    color: black;
+  }
+
+  
+@media screen and (max-width: 400px) {
+  .div_filter{
+    line-height: 1%;
+  }
+  .suche_input{
+    padding-left: 1%;
+    font-size: 9px;
+  }
+  .input_suche{
+    width: 69%;
+    border-radius: 5px;
+    font-size: 8px;
+    letter-spacing: -0.3px;
+  }
+  .input_suche_Name{
+    width: 85%;
+    height: 80%;
+    border-radius: 5px;
+    font-size: 8px;
+    letter-spacing: -0.3px;
+  }
+  .btn-primary {
+    width: 50%;
+    height: 95%;
+    font-size: 9px;
+    margin-top: 3%;
+    margin-left: 22%;
+  }
+}
