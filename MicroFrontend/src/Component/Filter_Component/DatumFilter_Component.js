@@ -1,8 +1,9 @@
 import React from "react";
 import "./styling.css";
 import Filter_fun from "../../Context/filter_fun";
+import { dateneinholen } from "../../Context/dateneinholen";
 
-export default function Filter({value} ) {
+export default function Filter({ value }) {
   return (
     <>
       <div className="suche_input">
@@ -18,7 +19,22 @@ export default function Filter({value} ) {
               value.filter_Daten.s_datum = new Date(
                 e.target.value
               ).toLocaleDateString();
-              Filter_fun(value.filter_Daten, value.eintraege2, value.setEintraege);
+              const heute = new Date().toLocaleDateString();
+
+              const datum = value.filter_Daten.s_datum;
+              dateneinholen(
+                value.setEintraege,
+                value.setEintraege2,
+                value.kategorie,
+                value.AnzahlTermine,
+                datum
+              );
+
+              Filter_fun(
+                value.filter_Daten,
+                value.eintraege2,
+                value.setEintraege
+              );
             }}
           />
         </div>
@@ -31,7 +47,11 @@ export default function Filter({value} ) {
               value.filter_Daten.e_datum = new Date(
                 e.target.value
               ).toLocaleDateString();
-              Filter_fun(value.filter_Daten, value.eintraege2, value.setEintraege);
+              Filter_fun(
+                value.filter_Daten,
+                value.eintraege2,
+                value.setEintraege
+              );
             }}
           />
         </div>

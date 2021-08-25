@@ -5,14 +5,19 @@ import homepage_bild from "../../images/homepage_bild.png";
 import MicroFrontend from "micro_frontend/komendeVeranstalltungen";
 
 const Homepage = () => {
-  const [pfad, setPfad] = useState("homepage");
-  const [hintergrundFarbe, setHintergrundFarbe] = useState("homepage");
+  const [kategorie, setKategorie] = useState("homepage");
+  const [hintergrundFarbe, setHintergrundFarbe] = useState("white");
+  const AnzahlTermine = 6;
   return (
     <>
       <center>
-        <ComNavigation value={{ setPfad, setHintergrundFarbe }} />
+        <ComNavigation value={{ setKategorie, setHintergrundFarbe }} />
         <img src={homepage_bild} alt="Skatebord" width="95%" height="50%" />
-        <MicroFrontend value={{ pfad, hintergrundFarbe }} />
+        <div className="div_mf">
+          <MicroFrontend
+            value={{ kategorie, hintergrundFarbe, AnzahlTermine }}
+          />
+        </div>
       </center>
     </>
   );

@@ -10,12 +10,14 @@
   margin-top: -8px;
   z-index: 10;
 }
+
 .logo {
   width: 16%;
   cursor: pointer;
   border-style: none;
   padding: 0;
 }
+
 .NEUES {
   width: 9.5%;
   border-style: none;
@@ -82,3 +84,5 @@
     rgb(115, 238, 115)
   );
 }
+
+

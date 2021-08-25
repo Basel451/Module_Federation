@@ -1,39 +1,37 @@
-.Eintraege{
-    padding-top: 3%;
-    padding-left: 7%;
-    padding-right: 7%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 1.7;
-  }
-  
-  .Ueberschrift{
-    display: flex;
-    flex-direction: row;
-    padding-left: 25%;
-    margin-bottom: -1.5%;
-  }
-  .Ueberschrift .Uhrzeit{
-    width: 14%;
-  }
-  .Ueberschrift .Name{
-    width: 31%;
-  }
-  .Ueberschrift .Ort{
-    width: 23%;
-  }
-  .Ueberschrift .Kategorien{
-    width: 33%;
-  }
+.Eintraege {
+  padding-top: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.7;
+}
 
-  @media screen and (max-width: 400px) {
-    .Eintraege{
-      line-height: 1;
-    }
-    .Ueberschrift .Uhrzeit{
-      width: 20%;
-      margin-left: -8px;
-    }
-    .Ueberschrift h4{
-      font-size: 9px;
-    }
+.Ueberschrift {
+  display: flex;
+  flex-direction: row;
+  padding-left: 25%;
+  margin-bottom: -1.5%;
+}
+.Ueberschrift .Uhrzeit {
+  width: 14%;
+}
+.Ueberschrift .Name {
+  width: 31%;
+}
+.Ueberschrift .Ort {
+  width: 23%;
+}
+.Ueberschrift .Kategorien {
+  width: 33%;
+}
+
+@media screen and (max-width: 400px) {
+  .Eintraege {
+    line-height: 1;
   }
+  .Ueberschrift .Uhrzeit {
+    width: 20%;
+    margin-left: -8px;
+  }
+  .Ueberschrift h4 {
+    font-size: 9px;
+  }
+}

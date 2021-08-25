@@ -1,56 +1,51 @@
 import axios from "axios";
-import datum_transformation from "./datum_transformation";
 
 // Diese Funktion dient zum Einholen von Daten aus dem Json-server, welche wir im Context aufrufen
-export async function dateneinholen(setEintraege, setEintraege2, pfad) {
+export async function dateneinholen(
+  setEintraege,
+  setEintraege2,
+  kategorie,
+  AnzahlTermine,
+  datum
+) {
   return await axios
-    .get("http://localhost:3000/Kalendereintrag")
+    //Hier wird die Anfrage an den Jsonserver geschickt und als Response bekommen wir die Daten
+    .post("http://localhost:3020/kalendereintrag", {
+      S_AnzahlTermine: AnzahlTermine,
+      S_Datum: datum,
+    })
     .then(
       await function (res) {
-        /* 
-          hiermit wollen wir die Termine nach Datum sortieren, damit die Fälle bedeckt werden, 
-          bei denen die Termine unsortiert gespeichert wurden.
-          */
-        const K_Eintraege = res.data.sort(function (a, b) {
-          if (datum_transformation(a.datum) < datum_transformation(b.datum)) {
-            return -1;
-          }
-          if (datum_transformation(a.datum) > datum_transformation(b.datum)) {
-            return 1;
-          }
-          // Datum müssen gleich sein
-          return 0;
-        });
-
         // Vorfilter der Daten nach Kategorien und Orte
-        if (pfad === "halle59") {
+        if (kategorie === "halle59") {
           // Hiermit filtern wir die K_Eintraege nur auf die mit Ort = Halle59 und Alle
-          const neueK_Eintraege = K_Eintraege.filter(
+          const Eintraege_v1 = res.data.daten.filter(
             (item) => item.ort === "Halle59" || item.ort === "Alle"
           );
           // Nach Filter speichern wir das Ergebnis in die Variablen von Context.
-          setEintraege(neueK_Eintraege);
-          setEintraege2(neueK_Eintraege);
-        } else if (pfad !== "homepage") {
-          const neueK_Eintraege = K_Eintraege.filter((item) => {
+          setEintraege(Eintraege_v1);
+          setEintraege2(Eintraege_v1);
+        } else if (kategorie !== "homepage") {
+          const Eintraege_v2 = res.data.daten.filter((item) => {
             //Da die Kategorie ein Array ist, wird die For-Schleife verwendet, um auf einzele Elemente zuzugreifen
             for (let i = 0; i < item.kategorie.length; i++) {
-              if (item.kategorie[i].name.toLowerCase() === pfad) {
+              if (item.kategorie[i].name.toLowerCase() === kategorie) {
                 return true;
               }
             }
             return false;
           });
-          setEintraege(neueK_Eintraege);
-          setEintraege2(neueK_Eintraege);
+          setEintraege(Eintraege_v2);
+          setEintraege2(Eintraege_v2);
         } else {
-          //Wenn Pfad nicht gibt, dann sollen die Daten einfach in Variablen gespeichert.
-          setEintraege(K_Eintraege);
-          setEintraege2(K_Eintraege);
+          //Wenn kategorie nicht gibt, dann sollen die Daten einfach in Variablen gespeichert.
+          setEintraege(res.data.daten);
+          setEintraege2(res.data.daten);
         }
       }
     )
     .catch((err) => {
+      // Falls ein Error geworfen wird, wird hierdurch auf die Konosole ausgegeben
       console.log(JSON.stringify(err));
       return "Hooply, etwas ist schief gelaufen!!";
     });

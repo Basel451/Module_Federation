@@ -5,7 +5,7 @@ import Filter_fun from "../../Context/filter_fun";
 export default function Filter({ value }) {
   return (
     <>
-      <div className="suche_input">
+      <div className="suche_input ">
         <div className="suche_input_block">
           <p>Name:</p>
         </div>

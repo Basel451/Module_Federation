@@ -1,0 +1,54 @@
+.div_Continer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.div_titel {
+  margin-top: 1%;
+  padding-top: 3%;
+  height: 100px;
+  background: rgba(247, 245, 245, 0.8);
+}
+.div_datum {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  background: rgba(247, 245, 245, 0.8);
+  padding-left: 1%;
+}
+.div_datum p {
+  align-self: center;
+  padding-left: 2%;
+}
+.div_uhrzeit {
+  display: flex;
+  flex-direction: row;
+  background: rgba(247, 245, 245, 0.8);
+  padding-left: 1%;
+}
+.div_uhrzeit p {
+  align-self: center;
+  padding-left: 2%;
+}
+
+.div_ort {
+  display: flex;
+  flex-direction: row;
+  background: rgba(247, 245, 245, 0.8);
+  padding-left: 1%;
+}
+.div_ort p {
+  align-self: center;
+  padding-left: 2%;
+}
+
+.div_beschreibung {
+  display: flex;
+  flex-direction: column;
+  background: rgba(247, 245, 245, 0.8);
+  padding-left: 1%;
+}
+.div_beschreibung p {
+  margin-top: -8px;
+}

@@ -9,7 +9,7 @@ const ComNavigation = ({ value }) => {
         <button
           className="logo"
           onClick={() => {
-            value.setPfad("homepage");
+            value.setKategorie("homepage");
             value.setHintergrundFarbe("white");
           }}
         >
@@ -24,8 +24,8 @@ const ComNavigation = ({ value }) => {
         <button
           className="KLETTERN"
           onClick={() => {
-            value.setPfad("klettern");
-            value.setHintergrundFarbe("rgba(76, 102, 248, 0.945)");
+            value.setKategorie("klettern");
+            value.setHintergrundFarbe("rgba(76, 102, 248, 0.2)");
           }}
         >
           <h4>KLETTERN</h4>
@@ -33,8 +33,8 @@ const ComNavigation = ({ value }) => {
         <button
           className="ARTISTIK"
           onClick={() => {
-            value.setPfad("artistik");
-            value.setHintergrundFarbe("rgb(245, 106, 56)");
+            value.setKategorie("artistik");
+            value.setHintergrundFarbe("rgba(245, 106, 56, 0.2)");
           }}
         >
           <h4>ARTISTIK</h4>
@@ -42,8 +42,8 @@ const ComNavigation = ({ value }) => {
         <button
           className="HALLE59"
           onClick={() => {
-            value.setPfad("halle59");
-            value.setHintergrundFarbe("brown");
+            value.setKategorie("halle59");
+            value.setHintergrundFarbe("rgba(167, 54, 54, 0.2)");
           }}
         >
           <h4>HALLE59</h4>
@@ -54,8 +54,8 @@ const ComNavigation = ({ value }) => {
         <button
           className="TRIAL"
           onClick={() => {
-            value.setPfad("trial");
-            value.setHintergrundFarbe("rgb(115, 238, 115)");
+            value.setKategorie("trial");
+            value.setHintergrundFarbe("rgba(115, 238, 115, 0.2)");
           }}
         >
           <h4>TRIAL</h4>

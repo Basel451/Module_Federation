@@ -1,26 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Switch, Route } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Hpmepage/index";
 import Detailseite from "./pages/Detailseite/index";
 
 const App = () => (
-  <Switch>
-    <Route exact path="/">
-      <Homepage />
-    </Route>
-    <Route exact path="/Detailseite">
-      <Detailseite />
-    </Route>
-  </Switch>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route path="/detailseite/:id" component={Detailseite} />
+    </Switch>
+  </Router>
 );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));

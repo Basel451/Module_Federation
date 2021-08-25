@@ -3,9 +3,8 @@ import "./styling.css";
 
 export default function Termine({ value }) {
   let d = "";
-  //console.log(value.hintergrund);
   return (
-    <>
+    <div style={{ background: value.hintergrund }} >
       {value.eintraege.map((item, index) => {
         return (
           <article key={`${index}-termin`} className="div_Termine">
@@ -19,7 +18,7 @@ export default function Termine({ value }) {
               <div className="div_Termin_Daten_block">
                 <a
                   className="div_Termin_Daten"
-                  href={"http://localhost:8000/Detailseite/" + item.id}
+                  href={"http://localhost:3006/detailseite/" + item.id}
                 >
                   <p className="div_Termine_Uhrzeit">{item.uhrzeit}</p>
                   <p className="div_Termine_Titel">{item.titel}</p>
@@ -44,6 +43,6 @@ export default function Termine({ value }) {
           </article>
         );
       })}
-    </>
+    </div>
   );
 }

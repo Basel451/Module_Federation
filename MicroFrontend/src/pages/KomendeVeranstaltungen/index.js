@@ -16,14 +16,30 @@ export default function Home({ value }) {
     name: "",
   });
   const hintergrund = value.hintergrundFarbe;
+  const datum = new Date().toLocaleDateString();
+
   useEffect(() => {
-    dateneinholen(setEintraege, setEintraege2, value.pfad);
-    console.log(hintergrund);
-  }, [value.pfad]);
+    dateneinholen(
+      setEintraege,
+      setEintraege2,
+      value.kategorie,
+      value.AnzahlTermine,
+      datum
+    );
+  }, [value.kategorie]);
   return (
     <>
       <div className="Eintraege">
-        <Filter value={{ filter_Daten, setEintraege, eintraege2 }} />
+        <Filter
+          value={{
+            filter_Daten,
+            setEintraege,
+            eintraege2,
+            setEintraege2,
+            kategorie: value.kategorie,
+            AnzahlTermine: value.AnzahlTermine,
+          }}
+        />
         <div className="Ueberschrift">
           <h4 className="Uhrzeit">Uhrzeit</h4>
           <h4 className="Name">Name</h4>
