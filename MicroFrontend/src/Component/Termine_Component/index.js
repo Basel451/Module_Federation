@@ -4,7 +4,7 @@ import "./styling.css";
 export default function Termine({ value }) {
   let d = "";
   return (
-    <div style={{ background: value.hintergrund }} >
+    <div style={{ background: value.hintergrund }}>
       {value.eintraege.map((item, index) => {
         return (
           <article key={`${index}-termin`} className="div_Termine">
