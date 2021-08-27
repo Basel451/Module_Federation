@@ -1,8 +1,11 @@
 import React from "react";
 import "./styling.css";
+import { useHistory } from "react-router-dom";
 
 export default function Termine({ value }) {
+  const history = useHistory();
   let d = "";
+  // href={"http://localhost:3006/detailseite/" + item.id}
   return (
     <div style={{ background: value.hintergrund }}>
       {value.eintraege.map((item, index) => {
@@ -16,9 +19,9 @@ export default function Termine({ value }) {
                 {d !== item.datum && <h3>{item.datum}</h3>}
               </div>
               <div className="div_Termin_Daten_block">
-                <a
+                <div
                   className="div_Termin_Daten"
-                  href={"http://localhost:3006/detailseite/" + item.id}
+                  onClick={() => history.push("/detailseite/" + item.id)}
                 >
                   <p className="div_Termine_Uhrzeit">{item.uhrzeit}</p>
                   <p className="div_Termine_Titel">{item.titel}</p>
@@ -35,7 +38,7 @@ export default function Termine({ value }) {
                       );
                     })}
                   </div>
-                </a>
+                </div>
                 <div className="div_Unterline" />
               </div>
             </div>

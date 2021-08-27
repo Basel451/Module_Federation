@@ -20,7 +20,6 @@ const Detailseite = (props) => {
         Wobei re für Response steht.*/
         await function (res) {
           setEintrag(res.data);
-          console.log(res.data);
         }
       )
       /*Falls die Abfrage nicht richtig ist oder der Server nicht gestartet ist, 

@@ -7,7 +7,7 @@ import MicroFrontend from "micro_frontend/komendeVeranstalltungen";
 const Homepage = () => {
   const [kategorie, setKategorie] = useState("homepage");
   const [hintergrundFarbe, setHintergrundFarbe] = useState("white");
-  const AnzahlTermine = 6;
+  const AnzahlTermine = 8;
   return (
     <>
       <center>
